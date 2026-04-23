@@ -39,12 +39,12 @@ jobs:
           pwd
 
           # Тегирование и пуш $APP1
-          docker tag backend:latest $REGISTRY/$APP1:$TAG
+          docker tag backend:$TAG $REGISTRY/$APP1:$TAG
           docker tag backend:latest $REGISTRY/$APP1:latest
           docker push $REGISTRY/$APP1 --all-tags
 
           # Тегирование и пуш $APP2
-          docker tag frontend:latest $REGISTRY/$APP2:$TAG
+          docker tag frontend:$TAG $REGISTRY/$APP2:$TAG
           docker tag frontend:latest $REGISTRY/$APP2:latest
           docker push $REGISTRY/$APP2 --all-tags
 
