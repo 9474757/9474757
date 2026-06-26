@@ -45,11 +45,12 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+            www_test:latest
+            www_test:${{ github.sha }} 
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
+# ${{ env.IMAGE_NAME }} 
+# ${{ env.IMAGE_NAME }}
 
 # name: Docker Build & Push
 
