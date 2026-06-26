@@ -45,8 +45,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            www_test:latest
-            www_test:${{ github.sha }} 
+            ghcr.io/${{ github.repository_owner }}/apache-alpine:latest
+            ghcr.io/${{ github.repository_owner }}/apache-alpine:${{ github.sha }} 
           cache-from: type=gha
           cache-to: type=gha,mode=max
 # ${{ env.IMAGE_NAME }} 
